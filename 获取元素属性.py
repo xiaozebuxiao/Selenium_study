@@ -13,7 +13,7 @@ elements = wd.find_elements(By.CLASS_NAME, 'result-item')
 
 # 获取class名为result-item的元素的id
 for element in elements:
-    # 获取id的属性值
+    # 获取id属性值
     id_name = element.get_attribute('id')
     print(id_name)
 
