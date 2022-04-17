@@ -7,6 +7,7 @@ from selenium.webdriver.common.by import By
 
 wd = webdriver.Chrome(service=Service(r'E:\chromedriver\chromedriver.exe'))
 wd.get('https://www.byhy.net/_files/stock1.html')
+wd.implicitly_wait(10)
 
 elements = wd.find_elements(By.CLASS_NAME, 'result-item')
 
