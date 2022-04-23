@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://cdn2.byhy.net/files/selenium/test4.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>白月黑羽：web自动化 - 弹出对话框</title>
+<script>
+
+function appendEle(info) {
+    var node = document.createElement("LI");
+    var textNode = document.createTextNode(info);
+    node.appendChild(textNode);
+    document.getElementById("add").appendChild(node);
+}
+
+function clickResponse() {
+    if (confirm("你确定要和白月黑羽一起学Python吗？") == true) {
+        appendEle("确定");
+    } else {
+        appendEle("取消操作");
+    }
+}
+
+
+function clickPrompt() {
+    var PythonCourse = prompt("请输入你想学习的Python课程", "Python基础");
+
+    if (PythonCourse == null ) {
+        appendEle("取消操作");
+    } else {
+        appendEle("你想学习:" + PythonCourse);
+    }
+}
+
+</script></head>
+
+<body>
+
+<br>
+<br>
+<button id="b1" onclick="alert(&quot;现在开始和白月黑羽一起学Python!&quot;);">alert</button>
+
+<br>
+<br>
+<button id="b2" onclick="clickResponse()">confirm</button>
+
+<br>
+<br>
+<button id="b3" onclick="clickPrompt()">prompt</button>
+
+<div id="add"></div>
+
+</body></html>
