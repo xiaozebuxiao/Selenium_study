@@ -22,5 +22,3 @@ for element_p in element_ps:
     print(element_p.text)
 
 pass
-
-
